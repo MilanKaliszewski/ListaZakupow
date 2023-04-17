@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ListaZakupow7.ContentViews"
+             x:Class="ListaZakupow7.ContentViews.Category">
+    <VerticalStackLayout MinimumWidthRequest="420" HorizontalOptions="Start" Margin="0,20,0,0" x:Name="SearchHelp">
+        <Border x:Name="rameczka" WidthRequest="420" HeightRequest="60" StrokeThickness="0" BackgroundColor="Purple" Padding="10,5,0,5" StrokeShape="RoundRectangle 10,10,0,0">
+            <HorizontalStackLayout WidthRequest="400" HorizontalOptions="Start">
+                <Label x:Name="HeaderListy" WidthRequest="250" VerticalOptions="Center"/>
+                <ImageButton x:Name="btnZwin" Source="up.png" WidthRequest="50" Padding="-5" VerticalOptions="Center" Clicked="btnZwin_Clicked" Margin="0,0,2,0"/>
+                <ImageButton Source="paletka.png" x:Name="btnPaletka" Padding="5" VerticalOptions="Center" Clicked="btnPaletka_Clicked"/>
+                <ImageButton Source="trash.png"  x:Name="btnUsunKat" Padding="5" VerticalOptions="Center" Clicked="btnUsunKat_Clicked"/>
+            </HorizontalStackLayout>
+        </Border>
+        <Border x:Name="rameczkaDwa" WidthRequest="420" StrokeThickness="0" StrokeShape="RoundRectangle 0,0,10,10" BackgroundColor="AliceBlue">
+            <VerticalStackLayout WidthRequest="420" x:Name="productParent" IsVisible="true" BackgroundColor="AliceBlue">
+            <HorizontalStackLayout WidthRequest="420" BackgroundColor="AliceBlue">
+                <Label Text="Nowy produkt" WidthRequest="357" TextColor="Black" VerticalOptions="Center" Margin="10,0,0,0"/>
+                <ImageButton Source="plus.png" HorizontalOptions="End" WidthRequest="40" HeightRequest="40" x:Name="addBtn" Clicked="addBtn_Clicked"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+    
+</ContentView>

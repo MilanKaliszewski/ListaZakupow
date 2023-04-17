@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListaZakupow7.MainPage"
+             xmlns:controls="clr-namespace:ListaZakupow7.ContentViews"
+             >
+
+    <HorizontalStackLayout WidthRequest="1200">
+        <ScrollView>
+            <VerticalStackLayout x:Name="predefView" WidthRequest="300">
+                <Button x:Name="newCategory" 
+                            Text="Dodaj nową kategorię" 
+                            Clicked="newCategory_Clicked" 
+                            WidthRequest="200"
+                            Margin="0,25,0,0"/>
+
+                <Label Text="Kategorie predefiniowane:" 
+                           HorizontalOptions="Center" 
+                           WidthRequest="200"
+                           Margin="0,25,0,5"/>
+
+                <Button x:Name="Nabiał"
+                            Text="Nabiał"
+                            Clicked="CategoryButton_Clicked"
+                            WidthRequest="200"/>
+
+                <Button x:Name="Chemia"
+                            Text="Chemia"
+                            Clicked="CategoryButton_Clicked"
+                            WidthRequest="200"/>
+
+                <Button x:Name="Pieczywo"
+                            Text="Pieczywo"
+                            Clicked="CategoryButton_Clicked"
+                            WidthRequest="200"/>
+
+                <Button x:Name="Słodycze"
+                            Text="Słodycze"
+                            Clicked="CategoryButton_Clicked"
+                            WidthRequest="200"/>
+
+                <Button x:Name="Napoje"
+                            Text="Napoje"
+                            Clicked="CategoryButton_Clicked"
+                            WidthRequest="200"/>
+
+                <Button x:Name="Alkohole"
+                            Text="Alkohole"
+                            Clicked="CategoryButton_Clicked"
+                            WidthRequest="200"/>
+
+                <Button x:Name="Inne"
+                            Text="Inne"
+                            Clicked="CategoryButton_Clicked"
+                            WidthRequest="200"/>
+
+                <Label Text="Twoje kategorie:"
+                           HorizontalOptions="Center"
+                           WidthRequest="200"
+                           Margin="0,25,0,5"
+                           />
+
+                <Label x:Name="brakCustom"
+                            Margin="0,5,0,0"
+                           IsVisible="true"
+                           Text="Nie masz żadnych kategorii."
+                           HorizontalOptions="Center"
+                           WidthRequest="185"
+                           />
+                <VerticalStackLayout x:Name="customCategories"
+                                         IsVisible="false"
+                                         WidthRequest="400">
+                    <!--Tu zostają dodane buttony użytkownika-->
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+        <ScrollView>
+            <VerticalStackLayout WidthRequest="440"
+                                 x:Name="Categories">
+            <!--TU BĘDZIE CONTENT VIEW-->
+            </VerticalStackLayout>
+            <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!WIDOK ZAKUPOWY TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        </ScrollView>
+        <ScrollView>
+            <VerticalStackLayout WidthRequest="440" x:Name="ShopView">
+                <Label Text="Twoja lista sklepowa:" WidthRequest="420" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </HorizontalStackLayout>
+
+</ContentPage>

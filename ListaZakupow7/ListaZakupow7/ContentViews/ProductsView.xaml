@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListaZakupow7.ContentViews.ProductsView">
+
+    <HorizontalStackLayout x:Name="ParentTemp" WidthRequest="430" HeightRequest="44">
+        <CheckBox x:Name="checkProduct" CheckedChanged="checkProduct_CheckedChanged" HorizontalOptions="Start" VerticalOptions="Center" Margin="0,0,-15,0" />
+        <ScrollView Orientation="Horizontal" WidthRequest="160" MaximumHeightRequest="44" HorizontalScrollBarVisibility="Never">
+            <Entry x:Name="Entry" Text="" Placeholder="Nazwa produktu" TextColor="Black" MaximumHeightRequest="10" Margin="0,0,0,0" Completed="Entry_Completed" TextChanged="Entry_Completed"/>
+        </ScrollView>
+        <ImageButton x:Name="minus" Source="minus.png" Clicked="minus_Clicked" WidthRequest="10" HeightRequest="10" VerticalOptions="Center" Padding="8"/>
+        <Label x:Name="iloscLabel" Text="1" MaximumWidthRequest="19" MinimumWidthRequest="19" WidthRequest="19" HorizontalOptions="Center" TextColor="Black" VerticalOptions="Center" Margin="0,0,0,0" HorizontalTextAlignment="Center"/>
+        <ImageButton x:Name="plus" Source="plus.png" WidthRequest="10" HeightRequest="10" Clicked="plus_Clicked" VerticalOptions="Center" Padding="10"/>
+        <ScrollView Orientation="Horizontal" WidthRequest="55" MaximumHeightRequest="44" HorizontalScrollBarVisibility="Never" Margin="8,0,8,0">
+            <Button x:Name="sztukEntry" Text="szt." MaximumHeightRequest="10" HorizontalOptions="Center" Clicked="sztukEntry_Completed" MinimumWidthRequest="10"/>
+        </ScrollView>
+        <ImageButton x:Name="delBtn" Source="trash.png" Clicked="delBtn_Clicked" Padding="10" HorizontalOptions="End" VerticalOptions="Center"/>
+        <Label x:Name="ID_hidden" IsVisible="false" MaximumHeightRequest="0" MaximumWidthRequest="0"/>
+    </HorizontalStackLayout>
+</ContentView>
